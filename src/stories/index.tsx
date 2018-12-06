@@ -6,7 +6,7 @@ import { storiesOf } from '@storybook/react'
 
 // import { Button, Welcome } from '@storybook/react/demo'
 
-import Hello from '../Hello'
+import Home from '../pages/home'
 
 // storiesOf('Welcome', module).add('to Storybook', () => (
 //   <Welcome showApp={linkTo('Button')} />
@@ -16,7 +16,7 @@ storiesOf('Button', module)
   // .add('with text', () => (
   //   <Button onClick={action('clicked')}>Hello Button</Button>
   // ))
-  .add('hello', () => <Hello name="mad" />)
+  .add('hello', () => <Home name="mad" />)
 // .add('with some emoji', () => (
 //   <Button onClick={action('clicked')}>
 //     <span role="img" aria-label="so cool">

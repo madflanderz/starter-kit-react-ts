@@ -42,3 +42,15 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Good to know for myself
+Really good help for project setup:
+https://medium.com/@johntucker_48673/hello-create-react-app-cra-typescript-8e04f7012939
+
+Good typescript for react introduction
+https://github.com/sw-yx/react-typescript-cheatsheet
+
+type vs interface
+https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c
+

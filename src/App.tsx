@@ -23,7 +23,7 @@ const App = () => (
           </ul>
         </nav>
         <Switch>
-          <Route path="/" exact={true} component={Home} />
+          <Route path="/" exact component={Home} />
           <Route path="/about/" component={withLoading(About)} />
         </Switch>
       </div>
