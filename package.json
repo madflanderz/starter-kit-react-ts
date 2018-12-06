@@ -7,8 +7,13 @@
     "@types/node": "^10.12.12",
     "@types/react": "^16.7.13",
     "@types/react-dom": "^16.0.11",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/storybook__addon-actions": "^3.4.1",
+    "@types/storybook__addon-links": "^3.3.3",
+    "@types/storybook__react": "^4.0.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "typescript": "^3.2.1"
   },
@@ -18,7 +23,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "lint-js": "eslint 'src/**/*.{js,jsx}'",
+    "lint-ts": "tslint -c tslint.json 'src/**/*.{ts,tsx}'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,13 +37,31 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "eslint-plugin-prettier": "^3.0.0",
-    "prettier": "^1.15.3",
-    "@storybook/react": "^4.0.12",
+    "@babel/core": "^7.2.0",
     "@storybook/addon-actions": "^4.0.12",
+    "@storybook/addon-info": "^4.0.12",
     "@storybook/addon-links": "^4.0.12",
     "@storybook/addons": "^4.0.12",
-    "@babel/core": "^7.2.0",
-    "babel-loader": "^8.0.4"
+    "@storybook/react": "4.1.0-alpha.11",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.4",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
+    "jest-dom": "^3.0.0",
+    "prettier": "^1.15.3",
+    "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "react-testing-library": "^5.3.1",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^3.6.0"
   }
 }

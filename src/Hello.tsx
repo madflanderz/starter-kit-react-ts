@@ -1,16 +1,7 @@
-import * as React from "react";
+import * as React from 'react'
 
 interface Props {
-  name: string;
+  name: string
 }
 
-export default ({ name }: Props) => (
-  <h1
-    onClick={(e) => {
-      console.log("Home");
-    }}
-  >
-    Hello
-    {name}!
-  </h1>
-);
+export default ({ name }: Props) => <h1>HEllo</h1>

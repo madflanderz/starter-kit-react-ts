@@ -1,6 +1,10 @@
 {
-  "extends": "react-app",
-  "plugins": ["prettier"],
+  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "env": {
+    "browser": true,
+    "jest/globals": true
+  },
+  "plugins": ["jest", "prettier"],
   "rules": {
     "prettier/prettier": [
       "error",

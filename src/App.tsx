@@ -1,30 +1,34 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Hello from './Hello';
+import React from 'react'
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import ErrorBoundary from './components/ErrorBoundary'
+import withLoading from './components/withLoading'
+import Home from './pages/home'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <Hello name="mad"/>
-        </header>
+// lazy load about page. This is a dynamic import and results in a own js bundle
+const About = React.lazy(() => import('./pages/about'))
+
+const App = () => (
+  <ErrorBoundary>
+    <Router>
+      <div>
+        <h1>Starter Kit</h1>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about/">About (lazy loaded)</Link>
+            </li>
+          </ul>
+        </nav>
+        <Switch>
+          <Route path="/" exact={true} component={Home} />
+          <Route path="/about/" component={withLoading(About)} />
+        </Switch>
       </div>
-    );
-  }
-}
+    </Router>
+  </ErrorBoundary>
+)
 
-export default App;
+export default App
